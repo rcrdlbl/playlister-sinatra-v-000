@@ -3,7 +3,7 @@
   <p>Name:</p><input type="text" name="song[name]" value="" id="Name">
   <p>Genres:</p>
   <% Genre.all.each do |genre| %>
-    <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
+    <p><%=genre.name%></p><input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
   <% end %>
   <p>Artist:</p>
   <input type="text" name="song[artist]" value="" id="Artist Name">
