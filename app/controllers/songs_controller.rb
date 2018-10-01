@@ -9,6 +9,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
+    song = Song.new(name: params[:name])
     
   end
 
