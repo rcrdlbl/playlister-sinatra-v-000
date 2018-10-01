@@ -7,6 +7,6 @@
     <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>" <%='checked' if @owner.pets.include?(pet) %>><%=genre.name%></input>
   <% end %>
   <p>Artist:</p>
-  <input type="text" name="song[artist]" value="<%= @song.artist.name %>" id="Artist Name">
+  <input id="Artist Name" type="text" name="song[artist]" value="<%= @song.artist.name %>">
   <input type="submit" name="" value="Save">
 </form>
