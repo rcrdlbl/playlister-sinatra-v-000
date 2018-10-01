@@ -9,8 +9,8 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    song = Song.new(name: params[:name])
-    
+    song = Song.new(name: params[:song]["name"])
+    song.artist = Artist.find_or_create_by(name: params[:song][:artist])
   end
 
   get '/songs/:slug' do
